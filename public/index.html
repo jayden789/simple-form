@@ -123,7 +123,6 @@
         isValid = false;
       }
 
-      // Email validation
       const email = document.getElementById('email').value.trim();
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (!email) {
@@ -136,7 +135,6 @@
         isValid = false;
       }
 
-      // Message validation
       const message = document.getElementById('message').value.trim();
       if (!message) {
         setError('messageGroup', 'messageError', 'Message is required');
@@ -191,7 +189,6 @@
       errorList.classList.add('show');
     }
 
-    // Form submission
     form.addEventListener('submit', async function(e) {
       e.preventDefault();
 
@@ -202,7 +199,6 @@
         return;
       }
 
-      // Show loading state
       submitBtn.disabled = true;
       submitBtn.classList.add('loading');
       submitBtn.textContent = 'Submitting';
